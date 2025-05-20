@@ -1,4 +1,35 @@
-﻿int num1, num2;
+int num1;
+Console.Write("Ingrese un numero: ");
+string? sNum1 = Console.ReadLine();
+bool R1 = int.TryParse(sNum1, out num1);
+if (R1)
+{
+    string mAbs = $"Valor Absoluto: {Math.Abs(num1)}";
+    string mSq = $"Cuadrado: {Math.Pow(num1, 2)}";
+    string? mSqrt=null;
+    if(num1>0){
+         mSqrt = $"Raiz Cuadrada: {Math.Sqrt(num1)}";
+    }else{
+         mSqrt = $"No existe la Raiz cuadrada del numero {num1} ";
+    }
+    string mSin = $"El seno del numero es: {Math.Sin(num1)}";
+    string mCos = $"El coseno del numero es: {Math.Cos(num1)}";
+    Console.WriteLine(mAbs);
+    Console.WriteLine(mSq);
+    Console.WriteLine(mSqrt);
+    Console.WriteLine(mSin);
+    Console.WriteLine(mCos);
+}
+int num2, num3;
+Console.WriteLine("Ingrese otro numerico: ");
+sNum1 = Console.ReadLine();
+Console.WriteLine("Ingrese otro numerico: ");
+string? sNum2 = Console.ReadLine();
+R1 = int.TryParse(sNum1, out num2);
+bool R2 = int.TryParse(sNum2, out num3);
+if (R1 && R2)
+{
+int num1, num2;
 Console.Write("Ingrese la operacion  (+,-,/,*): ");
 string? op = Console.ReadLine();
 do
@@ -46,3 +77,9 @@ do
 
 
 
+
+    string mMax = $"El mayor numero es: {Math.Max(num2, num3)}";
+    string mMin = $"El menor numero es: {Math.Min(num2, num3)}";
+        Console.WriteLine(mMax);
+        Console.WriteLine(mMin);
+}
