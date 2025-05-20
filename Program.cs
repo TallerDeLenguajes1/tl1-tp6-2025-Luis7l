@@ -42,7 +42,7 @@ do
     Console.WriteLine(resultado);
     Console.WriteLine("Ingrese la operacion  (+,-,/,*): ");
     op = Console.ReadLine();
-} while (op != null);
+} while (op =="/" || op =="*" || op =="-" || op =="+");
 
 
 
