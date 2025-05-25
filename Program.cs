@@ -1,48 +1,22 @@
-﻿int num1, num2;
-Console.Write("Ingrese la operacion  (+,-,/,*): ");
-string? op = Console.ReadLine();
-do
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+int a;
+int b;
+a=10;
+b=a;
+Console.WriteLine("valor de a:"+a);
+Console.WriteLine("valor de b:"+b);
+int num;
+Console.WriteLine("De un numero:");
+bool numero = int.TryParse(Console.ReadLine(), out num);
+int Darvuelta(int num)
 {
-    Console.Write("Ingrese un numero: ");
-    string? sNum1 = Console.ReadLine();
-    Console.Write("Ingrese el otro numero: ");
-    string? sNum2 = Console.ReadLine();
-
-
-    bool R1 = int.TryParse(sNum1, out num1);
-    bool R2 = int.TryParse(sNum2, out num2);
-    int? resultado = null;
-    if (R1 && R2)
+    int resultado = 0;
+    while (num > 0)
     {
-
-        switch (op)
-        {
-            case "+":
-                resultado = num1 + num2;
-
-                break;
-            case "-":
-                resultado = num1 - num2;
-                break;
-            case "*":
-                resultado = num1 * num2;
-                break;
-            case "/":
-                if (num2 != 0)
-                {
-                    resultado = num1 / num2;
-                }
-                else
-                {
-                    resultado = null;
-                }
-                break;
-        }
+        resultado = resultado * 10 + num % 10;
+        num /= 10;
     }
-    Console.WriteLine(resultado);
-    Console.WriteLine("Ingrese la operacion  (+,-,/,*): ");
-    op = Console.ReadLine();
-} while (op =="/" || op =="*" || op =="-" || op =="+");
-
-
-
+    return resultado;
+}
+Console.WriteLine("El numero al reves es: " + Darvuelta(num));
