@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,csharp,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,csharp,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/csharp,visualstudiocode,dotnetcore
+# Edit at https://www.toptal.com/developers/gitignore?templates=csharp,visualstudiocode,dotnetcore
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -420,3 +420,5 @@ obj/
 # Ignore all local history of files
 .history
 .ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/csharp,visualstudiocode,dotnetcore
