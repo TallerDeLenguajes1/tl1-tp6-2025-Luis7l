@@ -1,48 +1,18 @@
-﻿int num1, num2;
-Console.Write("Ingrese la operacion  (+,-,/,*): ");
-string? op = Console.ReadLine();
-do
+﻿Console.Write("Ingrese una frase:");
+string frase = Console.ReadLine();
+int longitud = frase.Length;
+Console.WriteLine("La longitud de la frase es: " + longitud);
+Console.Write("Ingrese otra Frase:");
+string frase2 = Console.ReadLine();
+string fraseConcatenada = string.Concat(frase, " ", frase2);
+Console.WriteLine("La frase concatenada es:" + fraseConcatenada);
+Console.WriteLine("Subcadena de la frase concatenada del índice 8 al " + (longitud - 1) + ": " + frase.Substring(8, longitud - 5));
+
+Console.WriteLine("Palabras de la primera frase:");
+foreach (string palabra in fraseConcatenada.Split(' '))
 {
-    Console.Write("Ingrese un numero: ");
-    string? sNum1 = Console.ReadLine();
-    Console.Write("Ingrese el otro numero: ");
-    string? sNum2 = Console.ReadLine();
+    Console.WriteLine(palabra);
+}
 
-
-    bool R1 = int.TryParse(sNum1, out num1);
-    bool R2 = int.TryParse(sNum2, out num2);
-    int? resultado = null;
-    if (R1 && R2)
-    {
-
-        switch (op)
-        {
-            case "+":
-                resultado = num1 + num2;
-
-                break;
-            case "-":
-                resultado = num1 - num2;
-                break;
-            case "*":
-                resultado = num1 * num2;
-                break;
-            case "/":
-                if (num2 != 0)
-                {
-                    resultado = num1 / num2;
-                }
-                else
-                {
-                    resultado = null;
-                }
-                break;
-        }
-    }
-    Console.WriteLine(resultado);
-    Console.WriteLine("Ingrese la operacion  (+,-,/,*): ");
-    op = Console.ReadLine();
-} while (op =="/" || op =="*" || op =="-" || op =="+");
-
-
-
+Console.WriteLine("La frase en mayúsculas es: " + frase.ToUpper());
+Console.WriteLine("La frase en minúsculas es: " + frase.ToLower());
